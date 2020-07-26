@@ -39,7 +39,7 @@ public class ScriptNodeTest {
         for (Element element : doc.select("script")) {
             String src = element.attr("src");
             if (src != null) {
-                // Pretend something.js contains this content
+                // Pretend we now read in the script something.js, which contains this content:
                 String srcFileContents = "if (x<23) { console.out('Holy Cow!'); }";
                 // delete the src attribute
                 element.removeAttr("src");
