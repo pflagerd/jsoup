@@ -36,7 +36,7 @@ public class ScriptNodeTest {
                 "</body>\n" +
                 "</html>";
         Document doc = Jsoup.parse(inputHtml);
-        for (Element element : doc.select("script")) {
+        for (Element element : doc.select("script")) { // DPP: 200726042111Z: I realize (and assume) there is only one script tag.
             String src = element.attr("src");
             if (src != null) {
                 // Pretend we now read in the script something.js, which contains this content:
